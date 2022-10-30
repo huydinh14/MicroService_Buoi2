@@ -1,0 +1,22 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: ChuyenBay-Server
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: update  #từ động đồng bộ model với database
+    generate-ddl: true
+    show-sql: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl.defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
